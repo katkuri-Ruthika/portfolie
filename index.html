@@ -1,101 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Katkuri Ruthika | Python Full Stack Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body { background-color: #050505; color: #ffffff; font-family: 'Inter', sans-serif; }
-        .gradient-text { background: linear-gradient(90deg, #a855f7, #ec4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .glass-card { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); }
+        body { background-color: #030014; color: #ffffff; font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: radial-gradient(circle at 50% 50%, rgba(76, 29, 149, 0.2) 0%, transparent 50%); }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .text-gradient { background: linear-gradient(to right, #c084fc, #6366f1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .skill-card:hover { transform: translateY(-5px); border-color: #8b5cf6; transition: all 0.3s ease; }
     </style>
 </head>
-<body>
+<body class="hero-gradient">
 
-    <nav class="flex justify-between items-center p-6 max-w-6xl mx-auto">
-        <div class="text-2xl font-bold gradient-text">Ruthika.py</div>
-        <div class="space-x-6 hidden md:block">
-            <a href="#about" class="hover:text-purple-400">About</a>
-            <a href="#skills" class="hover:text-purple-400">Skills</a>
-            <a href="#projects" class="hover:text-purple-400">Projects</a>
-            <a href="#contact" class="px-4 py-2 bg-purple-600 rounded-lg hover:bg-purple-700">Contact</a>
+    <nav class="fixed top-0 w-full z-50 glass border-b border-white/10">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="text-xl font-bold tracking-tighter">KR<span class="text-purple-500">.</span></span>
+            <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest text-gray-400">
+                <a href="#home" class="hover:text-white transition">Home</a>
+                <a href="#about" class="hover:text-white transition">About</a>
+                <a href="#skills" class="hover:text-white transition">Skills</a>
+                <a href="#projects" class="hover:text-white transition">Projects</a>
+                <a href="#contact" class="hover:text-white transition">Contact</a>
+            </div>
         </div>
     </nav>
 
-    <section class="h-[80vh] flex flex-col justify-center items-center text-center px-4">
-        <h1 class="text-5xl md:text-7xl font-extrabold mb-4">Hi, I'm <span class="gradient-text">Katkuri Ruthika</span></h1>
-        [span_0](start_span)<p class="text-xl text-gray-400 max-w-2xl">Python Full Stack Developer[span_0](end_span) [span_1](start_span)& CSE Student at Vaagdevi College of Engineering.[span_1](end_span) Building automated, eco-friendly web solutions.</p>
-        <div class="mt-8 flex gap-4">
-            <a href="#projects" class="px-8 py-3 border border-purple-500 rounded-full hover:bg-purple-500 transition">View Work</a>
-            <a href="https://github.com/ruthikareddy121" class="px-8 py-3 bg-white text-black rounded-full font-bold hover:bg-gray-200">GitHub</a>
+    <section id="home" class="pt-32 pb-20 px-6 text-center">
+        <div class="inline-block px-4 py-1.5 mb-6 glass rounded-full text-xs font-semibold text-purple-400 uppercase tracking-widest">
+            Python Full Stack Developer
         </div>
-    </section>
-
-    <section id="about" class="max-w-4xl mx-auto py-20 px-6">
-        <h2 class="text-3xl font-bold mb-8 border-b border-purple-500 inline-block">About Me</h2>
-        <p class="text-gray-300 leading-relaxed">
-            [span_2](start_span)I am a hardworking[span_2](end_span) [span_3](start_span)Computer Science student[span_3](end_span) [span_4](start_span)with a CGPA of 7.96.[span_4](end_span) 
-            [span_5](start_span)My vision is to grow as a professional in an innovative world[span_5](end_span) by utilizing my skills in Python 
-            [span_6](start_span)and Automation.[span_6](end_span) [span_7](start_span)I recently achieved an "Excellent" rating in the AICTE Student Learning Assessment.[span_7](end_span)
+        <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
+            Katkuri <span class="text-gradient">Ruthika</span>
+        </h1>
+        <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+            CSE Student at **Vaagdevi College of Engineering**. 
+            Passionate about building scalable web applications and eco-friendly tech solutions.
         </p>
-    </section>
-
-    <section id="skills" class="max-w-6xl mx-auto py-20 px-6">
-        <h2 class="text-3xl font-bold mb-12 text-center">Tech Stack</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div class="glass-card p-6 rounded-2xl text-center hover:scale-105 transition">
-                <i class="fab fa-python text-4xl text-blue-400 mb-4"></i>
-                [span_8](start_span)<p>Python[span_8](end_span)</p>
-            </div>
-            <div class="glass-card p-6 rounded-2xl text-center hover:scale-105 transition">
-                <i class="fab fa-js text-4xl text-yellow-400 mb-4"></i>
-                [span_9](start_span)<p>JavaScript[span_9](end_span)</p>
-            </div>
-            <div class="glass-card p-6 rounded-2xl text-center hover:scale-105 transition">
-                <i class="fas fa-robot text-4xl text-green-400 mb-4"></i>
-                [span_10](start_span)<p>UiPath Automation[span_10](end_span)</p>
-            </div>
-            <div class="glass-card p-6 rounded-2xl text-center hover:scale-105 transition">
-                <i class="fab fa-github text-4xl text-white mb-4"></i>
-                [span_11](start_span)<p>Git & GitHub[span_11](end_span)</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="max-w-6xl mx-auto py-20 px-6">
-        <h2 class="text-3xl font-bold mb-12">Featured Project</h2>
-        <div class="glass-card p-8 rounded-3xl flex flex-col md:flex-row gap-8">
-            <div class="md:w-1/2">
-                [span_12](start_span)<h3 class="text-2xl font-bold text-purple-400 mb-4">Community Eco-Waste Management[span_12](end_span)</h3>
-                [span_13](start_span)<p class="text-gray-400 mb-4">Developed during an internship with Edunet, this platform allows users to report and manage eco-waste efficiently.[span_13](end_span)</p>
-                <ul class="list-disc list-inside text-gray-500 mb-6">
-                    [span_14](start_span)<li>Full Stack Architecture[span_14](end_span)</li>
-                    [span_15](start_span)<li>User-friendly Reporting[span_15](end_span)</li>
-                    [span_16](start_span)<li>Team Collaboration[span_16](end_span)</li>
-                </ul>
-                <span class="px-3 py-1 bg-purple-900/50 text-purple-300 rounded text-sm">Python/Django</span>
-            </div>
-            <div class="md:w-1/2 bg-gray-800 rounded-xl flex items-center justify-center">
-                <p class="text-gray-500">Project Demo Image</p>
-            </div>
-        </div>
-    </section>
-
-    <footer id="contact" class="py-20 text-center border-t border-gray-900">
-        <h2 class="text-3xl font-bold mb-8">Get In Touch</h2>
-        <div class="flex flex-col gap-2 text-gray-400 mb-8">
-            [span_17](start_span)<p><i class="fas fa-envelope mr-2"></i> ruthikareddy121@gmail.com[span_17](end_span)</p>
-            [span_18](start_span)<p><i class="fas fa-phone mr-2"></i> 7416697956[span_18](end_span)</p>
-            [span_19](start_span)<p><i class="fas fa-map-marker-alt mr-2"></i> Warangal, Telangana[span_19](end_span)</p>
-        </div>
-        <div class="flex justify-center gap-6">
-            <a href="https://github.com/ruthikareddy121" class="text-3xl hover:text-purple-500"><i class="fab fa-github"></i></a>
-            <a href="#" class="text-3xl hover:text-purple-500"><i class="fab fa-linkedin"></i></a>
-        </div>
-        <p class="mt-12 text-gray-600 text-sm">© 2026 Katkuri Ruthika. Built with Python & Tailwind.</p>
-    </footer>
-
-</body>
-</html>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="#projects" class="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-bold transition">View Projects</a>
+            <a href="
